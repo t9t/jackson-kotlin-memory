@@ -1,0 +1,36 @@
+package memory.kotlin
+
+import com.fasterxml.jackson.annotation.JsonProperty
+
+data class KRepository(
+    @JsonProperty("id") val id: Long,
+    @JsonProperty("node_id") val nodeId: String,
+    @JsonProperty("name") val name: String,
+    @JsonProperty("full_name") val fullName: String,
+    @JsonProperty("owner") val owner: KOwner,
+    @JsonProperty("private") val private: Boolean,
+    @JsonProperty("html_url") val htmlUrl: String,
+    @JsonProperty("description") val description: String,
+    @JsonProperty("fork") val fork: Boolean,
+    @JsonProperty("url") val url: String,
+    @JsonProperty("archive_url") val archiveUrl: String,
+    @JsonProperty("comments_url") val commentsUrl: String,
+    @JsonProperty("commits_url") val commitsUrl: String,
+    @JsonProperty("forks_url") val forksUrl: String,
+    @JsonProperty("branches_url") val branchesUrl: String,
+    @JsonProperty("git_refs_url") val gitRefsUrl: String,
+    @JsonProperty("git_url") val gitUrl: String,
+    @JsonProperty("issues_url") val issuesUrl: String,
+    @JsonProperty("ssh_url") val sshUrl: String,
+    @JsonProperty("homepage") val homepage: String,
+    @JsonProperty("language") val language: String?,
+    @JsonProperty("forks_count") val forksCount: Long,
+    @JsonProperty("stargazers_count") val stargazersCount: Long,
+    @JsonProperty("size") val size: Long,
+    @JsonProperty("default_branch") val defaultBranch: String,
+    @JsonProperty("topics") val topics: List<String>,
+    @JsonProperty("pushed_at") val pushedAt: String,
+    @JsonProperty("created_at") val createdAt: String,
+    @JsonProperty("updated_at") val updatedAt: String,
+    @JsonProperty("permissions") val permissions: Map<String, Boolean>,
+)
